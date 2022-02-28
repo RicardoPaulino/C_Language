@@ -13,6 +13,15 @@ int main(int argc, char *argv[])
   // Mudando a primeira letra da string
   palavra[0] = 'L';
   printf("Palavra com nova inicial -> %s\n\n",palavra);
+  
+  // Copiar o conteúde de uma string para outra manualmente
+  char copia_1[50];
+  int i;
+  for(i = 0; i < 50; i++)
+        copia_1[i] = palavra[i];      
+  copia_1[i] = "\0";
+  
+  printf("Palavra copiada -> %s\n\n",copia_1);
   system("PAUSE");	
   return 0;
 }
