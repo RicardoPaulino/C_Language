@@ -21,23 +21,28 @@ int main(int argc, char *argv[])
   // Copiar o conteúdo de uma string utilizando strcpy
   char copia_2[60];
   
-  strcpy(copia_2, "alguma coisa digitada");
+  strcpy(copia_2,copia_1);
   printf("Copia #2 manual da palavra -> %s\n\n",copia_2);
+  
+  
+    
+  // Invertendo uma string
+  char str[20] = "Linguagem C";
+  char c;
+  int x, tam = strlen(str);
+  for(x = 0; x < tam/2; x++)
+  {
+        c = str[x];
+        str[x] = str[tam-1-x];
+        str[tam-1-x] = c;      
+  } 
+  printf("str -> %s\n\n", str);
   
   printf("--------------- Address Memory ---------------\n\n");
   printf("Address palavra = %d\n", &palavra);
   printf("Address copia_1 = %d\n", &copia_1);
   printf("Address copia_2 = %d\n", &copia_2);
-  
-   char src[40];
-   char dest[100];
-  
-   memset(dest, '\0', sizeof(dest));
-   strcpy(src, "This is tutorialspoint.com");
-   strcpy(dest, src);
-
-   printf("Final copied string : %s\n", dest);
- 
+  printf("Address str = %d\n\n", &str);
   system("PAUSE");	
   return 0;
 }
