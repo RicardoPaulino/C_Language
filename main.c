@@ -8,7 +8,11 @@ int main(int argc, char *argv[])
   
   printf("Digite uma palavra: \n");
   scanf("%s", palavra);
-  printf("Palavra digitada foi %s\n\n",palavra);
+  printf("\nPalavra digitada foi %s\n\n",palavra);
+  
+  // Mudando a primeira letra da string
+  palavra[0] = 'L';
+  printf("Palavra com nova inicial -> %s\n\n",palavra);
   system("PAUSE");	
   return 0;
 }
